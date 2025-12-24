@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        .outerbox{
+            height:100vh;
+            width:100vw;
+            display:flex;
+            flex-direction: column;
+            gap:1px;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bgimage.avif);
+        }
+        .day{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:30vw;
+            background-color:rgb(59,58,58);
+            
+            
+            color:green;
+            height:30px;
+            border: 1px solid black;
+            container-type: size;
+            
+
+        }
+        .clock{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            width:30vw;
+            height:130px;
+            background-color: rgb(59, 58, 58);
+            border: 1px solid black;
+
+
+
+        }
+        .time{
+            
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            color:green;
+            border:2px solid black;
+            flex-shrink: 1;
+            flex-grow: 1;
+            container-type: size;
+            
+
+
+        }
+       
+        .time p{
+            font-size:80cqw;
+        }
+        .dayi {
+            
+            font-size: 50cqh;  /* Use container query height instead */
+             /* Remove default <p> margins */
+    /**line-height: 1; **/
+        }
+        @media (max-width:1100px) {
+        .dayi{
+            text-align: center;
+            font-size: 30cqh;
+            
+        }
+    .clock{
+        height:75px;
+    }}
+        
+       
+       
+        
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="day"><p class="dayi"></p>
+        </div>
+        <div class="clock">
+            <div class="hbox time"><p id="box1"></p></div>
+            <div class="mbox time"><p id="box2"></p></div>
+            <div class="sbox time"><p id="box3"></p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
